@@ -1,10 +1,16 @@
 // src/App.tsx
-import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Navigate,
+} from "react-router-dom";
 import { useEffect, useState } from "react";
 import { account } from "./auth";
 
-import Signup from "./pages/signup";
-import Login from "./pages/login";
+import Signup from "./pages/Signup.tsx";
+import Login from "./pages/Login.tsx";
+
 import ProtectedRoute from "./components/ProtectedRoute";
 import Header from "./components/Header";
 import Sidebar from "./components/Sidebar";
@@ -25,7 +31,8 @@ const App = () => {
     checkUser();
   }, []);
 
-  if (isAuthenticated === null) return <div className="text-center p-8">Loading...</div>;
+  if (isAuthenticated === null)
+    return <div className="text-center p-8">Loading...</div>;
 
   return (
     <Router>
