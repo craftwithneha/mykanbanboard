@@ -1,5 +1,5 @@
 // KanbanBoard.tsx
-import { DndContext, type DragEndEvent } from "@dnd-kit/core";
+import { DndContext, type DragEndEvent } from "@dnd-kit/core";                                                                                                                               
 import {
   SortableContext,
   verticalListSortingStrategy,
@@ -221,7 +221,7 @@ export default function KanbanBoard() {
                 }
               >
                 {column.items.map((item, i) => (
-                  <DraggableCard
+                  <DraggableCard              
                     key={item.id}
                     item={{ ...item, index: i }}
                     columnId={columnId}
